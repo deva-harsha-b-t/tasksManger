@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="?selectableItemBackground"
+    android:layout_width="match_parent"
+    android:elevation="8dp"
+    android:backgroundTint="@color/white"
+    app:cardCornerRadius="2dp"
+    android:layout_marginTop="8dp"
+    android:layout_marginBottom="8dp"
+    android:layout_height="wrap_content">
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:paddingBottom="8dp"
+        android:gravity="center"
+        android:paddingTop="8dp">
+
+        <ImageView
+            android:id="@+id/taskItemCompleteIcon"
+            android:layout_marginStart="4dp"
+            android:layout_marginEnd="2dp"
+            android:src="@drawable/ic_outline_circle_24_black"
+            android:layout_width="38dp"
+            android:layout_height="38dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/taskName"
+            android:layout_width="0dp"
+            android:textColor="@color/black"
+            android:layout_marginEnd="8dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:text="task 1"
+            android:textSize="18sp" />
+
+        <ImageButton
+            android:id="@+id/deleteButton"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:backgroundTint="#E1E1E1"
+            android:layout_marginEnd="8dp"
+            android:src="@drawable/delete_icon" />
+
+    </LinearLayout>
+
+</androidx.cardview.widget.CardView>

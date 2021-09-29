@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "391684549074",
+    "project_id": "dojo-todo-9aa49",
+    "storage_bucket": "dojo-todo-9aa49.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:391684549074:android:50b9746a7dd64f9e89000b",
+        "android_client_info": {
+          "package_name": "com.dojo.dojotodo"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "391684549074-5j0eft0s5ae1msmh2a76ibcen49iv2fu.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBJxNaFZopxdwdIQeS2KzC5lNkGUnc60co"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "391684549074-5j0eft0s5ae1msmh2a76ibcen49iv2fu.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

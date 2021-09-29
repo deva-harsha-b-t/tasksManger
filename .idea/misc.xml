@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DesignSurface">
+    <option name="filePathToZoomLevelMap">
+      <map>
+        <entry key="..\:/Flutter/projects/Dojotodo/app/src/main/res/drawable/bk_item.xml" value="0.2703125" />
+        <entry key="..\:/Flutter/projects/Dojotodo/app/src/main/res/drawable/c_n_task_bk.xml" value="0.2703125" />
+        <entry key="..\:/Flutter/projects/Dojotodo/app/src/main/res/drawable/dual_tone_bk.xml" value="0.2703125" />
+        <entry key="..\:/Flutter/projects/Dojotodo/app/src/main/res/drawable/ic_bk.xml" value="0.2703125" />
+        <entry key="..\:/Flutter/projects/Dojotodo/app/src/main/res/drawable/ripple_bk.xml" value="0.2703125" />
+        <entry key="..\:/Flutter/projects/Dojotodo/app/src/main/res/drawable/sign_in_with_google_bk.xml" value="0.2703125" />
+        <entry key="..\:/Flutter/projects/Dojotodo/app/src/main/res/layout/activity_login.xml" value="0.25416666666666665" />
+        <entry key="..\:/Flutter/projects/Dojotodo/app/src/main/res/layout/activity_main.xml" value="0.25416666666666665" />
+        <entry key="..\:/Flutter/projects/Dojotodo/app/src/main/res/layout/activity_profile.xml" value="0.25416666666666665" />
+        <entry key="..\:/Flutter/projects/Dojotodo/app/src/main/res/layout/activity_splash.xml" value="0.25416666666666665" />
+        <entry key="..\:/Flutter/projects/Dojotodo/app/src/main/res/layout/activity_task.xml" value="0.24010416666666667" />
+        <entry key="..\:/Flutter/projects/Dojotodo/app/src/main/res/layout/activity_task_details.xml" value="0.25416666666666665" />
+        <entry key="..\:/Flutter/projects/Dojotodo/app/src/main/res/layout/bottom_sheet_task.xml" value="0.25416666666666665" />
+        <entry key="..\:/Flutter/projects/Dojotodo/app/src/main/res/layout/one_day.xml" value="0.25416666666666665" />
+        <entry key="..\:/Flutter/projects/Dojotodo/app/src/main/res/layout/task_item.xml" value="0.264" />
+      </map>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="1.8" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/build/classes" />
+  </component>
+  <component name="ProjectType">
+    <option name="id" value="Android" />
+  </component>
+</project>

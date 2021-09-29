@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@drawable/ic_bk"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:textColor="@color/black"
+        android:layout_marginTop="16dp"
+        android:text="OverView"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <LinearLayout
+        android:id="@+id/ll1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView">
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardView1"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_marginEnd="8dp"
+            android:layout_height="100dp"
+            android:backgroundTint="@color/black"
+            app:cardCornerRadius="12dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/SuperDaysNumber"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="3"
+                    android:textStyle="bold"
+                    android:textColor="@color/white"
+                    android:textSize="24sp" />
+
+                <TextView
+                    android:id="@+id/SuperDays"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="8dp"
+                    android:text="Super Days"
+                    android:textColor="#CFCFCF" />
+            </LinearLayout>
+
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardView2"
+            android:layout_width="0dp"
+            android:layout_height="100dp"
+            android:layout_weight="1"
+            android:backgroundTint="@color/white"
+            android:layout_marginStart="8dp"
+            app:cardCornerRadius="12dp"
+            tools:layout_editor_absoluteX="215dp"
+            tools:layout_editor_absoluteY="51dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/UFTsNumber"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:textColor="@color/black"
+                    android:textStyle="bold"
+                    android:text="0"
+                    android:textSize="24sp" />
+
+                <TextView
+                    android:id="@+id/UFTs"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="#1E1E1E"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="8dp"
+                    android:text="Unfinished Tasks" />
+            </LinearLayout>
+
+        </androidx.cardview.widget.CardView>
+
+    </LinearLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_marginEnd="16dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="8dp"
+        android:id="@+id/daysRecyclerView"
+        android:background="?selectableItemBackground"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toTopOf="@+id/linearLayout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ll1" />
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="16dp"
+        android:gravity="center_horizontal"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/addNewTask"
+            android:background="@drawable/ripple_bk"
+            android:textColor="@color/white"
+            android:paddingBottom="4dp"
+            android:paddingTop="4dp"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="58dp"
+            android:layout_marginEnd="8dp"
+            android:text="create new Task" />
+
+        <androidx.cardview.widget.CardView
+            app:cardCornerRadius="6dp"
+            android:layout_width="58dp"
+            android:layout_height="58dp">
+            <ImageButton
+                android:id="@+id/insights"
+                android:backgroundTint="#FFEB3B"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:src="@drawable/insights_icon" />
+        </androidx.cardview.widget.CardView>
+
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
