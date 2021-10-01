@@ -8,6 +8,7 @@ import androidx.recyclerview.widget.RecyclerView;
 import android.content.Context;
 import android.os.Bundle;
 import android.text.TextUtils;
+import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
@@ -64,7 +65,8 @@ public class TaskActivity extends AppCompatActivity {
         });
         recyclerView.setLayoutManager(new linearLayoutMangerWrapper(this));
         dateString = getIntent().getStringExtra("dayId");
-
+        dateInShort.setText(dateString);
+        checkForButtonVisibility();
         Query query = mRef.child("users").child(firebaseUser.getUid()).child("days")
                 .child(dateString).child("userTasks").orderByChild("taskId").limitToFirst(5);
 
@@ -98,11 +100,29 @@ public class TaskActivity extends AppCompatActivity {
                                 });
                             }
                         });
+                        checkForButtonVisibility();
                 }
             }
         });
         recyclerView.setAdapter(tasksadapter);
 
+    }
+    private void checkForButtonVisibility(){
+        mRef.child("users").child(firebaseUser.getUid()).child("days")
+                .child(dateString).child("numberOfTasks").get().addOnCompleteListener(new OnCompleteListener<DataSnapshot>() {
+            @Override
+            public void onComplete(@NonNull Task<DataSnapshot> task) {
+                if(task.isSuccessful()){
+                    int n = task.getResult().getValue(Integer.class);
+                    if(n>=5){
+                        createTaskButton.setVisibility(View.GONE);
+                    }else{
+                        createTaskButton.setVisibility(View.VISIBLE);
+                    }
+                }
+
+            }
+        });
     }
 
     private void createTask() {
@@ -112,11 +132,14 @@ public class TaskActivity extends AppCompatActivity {
         EditText taskDetails = bottomSheetDialog.findViewById(R.id.editTextTextTaskDetails);
         Button cancelButton = bottomSheetDialog.findViewById(R.id.cancelTask);
         Button addTaskButton = bottomSheetDialog.findViewById(R.id.BSaddTaskButton);
+        assert cancelButton != null;
         cancelButton.setOnClickListener(v -> {
             Toast.makeText(context, "canceling", Toast.LENGTH_SHORT).show();
         });
+        assert addTaskButton != null;
         addTaskButton.setOnClickListener(v ->{
-            if(TextUtils.isEmpty(taskName.getText().toString()) || TextUtils.isEmpty(taskDetails.getText().toString())){
+            assert taskName != null;
+            if(TextUtils.isEmpty(taskName.getText().toString()) || TextUtils.isEmpty(Objects.requireNonNull(taskDetails).getText().toString())){
                 Toast.makeText(context, "some Fields are empty", Toast.LENGTH_SHORT).show();
             }else{
                 String taskNameString = taskName.getText().toString();
@@ -149,6 +172,7 @@ public class TaskActivity extends AppCompatActivity {
 
                                 });
                             }
+                            checkForButtonVisibility();
                         }
                     }
                 });
